@@ -1,1 +1,1 @@
-# flasktodoapp
+# blog projesi
