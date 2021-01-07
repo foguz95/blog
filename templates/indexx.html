@@ -1,0 +1,19 @@
+{% extends "layo.html" %}
+
+{% block body %}
+<div class="jumbotron text-center">
+ <h3> Leziz Tarifler Bloğuna Hoşgeldiniz </h3>
+ <p> Bu blogda yepyeni nefis tarifler bulabilir, yorum yapabilir ve kendi tariflerinizi paylaşabilirsiniz. </p>
+</div>
+{% if answer=="evet" %}
+<p> Cevabınız Evetmiş</p>
+{% else %}
+<p> Cevabınız Evet değilmiş.</p>
+{% endif %}
+
+<ul>
+    {% for yemek in yemekler  %}
+        <li> id: {{yemek.id}} - Yemek Adı: {{yemek.title}} - Malzemeler:{{yemek.content}}}</li>
+    {% endfor %}
+</ul>
+{% endblock body %}

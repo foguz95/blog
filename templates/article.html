@@ -1,0 +1,19 @@
+{% extends "layo.html" %}
+{% block body %}
+
+{% if article %}
+
+<h4> id: {{article[0]}}</h4>
+<hr>
+Yazar: {{article[2]}}
+<hr>
+Oluşturulma Tarihi: {{article[4]}}
+<hr>
+Malzemeler Ve Yapılışı: {{article[3]|safe}}
+
+{% else %}
+<div class ="alert alert-warning">Böyle bir Makale Bulunmuyor !</div>
+{% endif %}
+
+
+{% endblock body %}
